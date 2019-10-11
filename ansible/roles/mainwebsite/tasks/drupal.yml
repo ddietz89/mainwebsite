@@ -23,3 +23,8 @@
 - name: set root credentials for mariadb 
   mysql_user: name=root host=localhost password={{ mysql_root_pass }}
 
+- name: create database for drupal
+  mysql_db: name=drupal state=present
+
+- name: create user for drupal
+  mysql_user: name=drupal  password={{ drupal_pass }} priv="drupal.*" state=present 
