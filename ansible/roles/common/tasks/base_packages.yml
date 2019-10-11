@@ -1,0 +1,11 @@
+- name: base packages
+  yum: name='{{ item }}' state=present
+  with_items:
+         - git
+
+#- name: pip packages
+#  pip: 
+#    name: flask
+#- name: pip packages
+#  pip: 
+#    name: flask-wtf

@@ -1,0 +1,21 @@
+# Set up users
+- name: add ddietz
+  user:
+    name: ddietz
+    shell: /bin/bash
+    createhome: True
+    uid: 1001
+
+- name: copy template ddietz homedir
+  copy:
+    src: home/ddietz/
+    dest: /home/ddietz/
+    owner: ddietz
+
+- file:
+    path: /home/ddietz/.ssh
+    mode: '0700'
+     
+- file:
+    path: /home/ddietz/.ssh/id_rsa
+    mode: '0600'

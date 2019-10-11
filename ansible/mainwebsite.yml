@@ -1,0 +1,6 @@
+# common playbook
+-
+  name: Set files and configurations for mainwebsite
+  hosts: mainwebsite
+  roles:
+    - mainwebsite
