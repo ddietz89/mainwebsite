@@ -8,7 +8,8 @@
          - MySQL-python
 
 - name: upgrade php
-  shell: amazon-linux-extras install '{{ item }}' state=present
+  shell: amazon-linux-extras enable '{{ item }}' state=present
+  become: yes
   with_items:
          - php7.2
          - php-curl
