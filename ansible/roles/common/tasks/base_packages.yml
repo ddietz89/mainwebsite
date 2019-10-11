@@ -15,13 +15,13 @@
          - php-curl
          - php-gd
          - php-cli
-         - php-mysql
-         #- php-xml
-         #- php-mbstring
-         #- php-fpm
-         #- php-json
-         #- php-intl
-         #- php-zip
+         - php-xml
+         - php-mbstring
+         - php-mysqlnd
+         - php-fpm
+         - php-json
+         - php-intl
+         - php-zip
 
 
 
