@@ -7,6 +7,16 @@
          - mariadb-server
          - httpd
          - MySQL-python
+         - php-curl
+         - php-gd
+         - php-cli
+         - php-mysql
+         - php-xml
+         - php-mbstring
+         - php-fpm
+         - php-json
+         - php-intl
+         - php-zip
 
 #- name: pip packages
 #  pip: 
