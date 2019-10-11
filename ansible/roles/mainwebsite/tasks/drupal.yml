@@ -1,0 +1,5 @@
+- name: install composer.phar script
+  copy:
+    src: usr/sbin/composer.phar
+    dest: /usr/sbin/composer.phar
+    mode: '0755'
