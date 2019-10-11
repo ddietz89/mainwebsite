@@ -1,3 +1,9 @@
+- name: upgrade php
+  shell: amazon-linux-extras enable '{{ item }}'
+  become: yes
+  with_items:
+         - php7.2
+
 - name: base packages
   yum: name='{{ item }}' state=present
   with_items:
@@ -6,12 +12,6 @@
          - mariadb-server
          - httpd
          - MySQL-python
-
-- name: upgrade php
-  shell: amazon-linux-extras enable '{{ item }}'
-  become: yes
-  with_items:
-         - php7.2
          - php-curl
          - php-gd
          - php-cli
@@ -22,6 +22,7 @@
          - php-json
          - php-intl
          - php-zip
+
 
 
 #- name: pip packages
