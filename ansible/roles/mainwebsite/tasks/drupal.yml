@@ -20,9 +20,6 @@
     dest: /root/.my.cnf
     mode: 0600
 
-- name: upgrade php
-  shell: amazon-linux-extras install php7.2
-
 - name: set root credentials for mariadb 
   mysql_user: name=root host=localhost password={{ mysql_root_pass }}
 
