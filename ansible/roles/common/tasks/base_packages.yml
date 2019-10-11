@@ -15,7 +15,7 @@
          - php-curl
          - php-gd
          - php-cli
-         #- php-mysql
+         - php-mysql
          #- php-xml
          #- php-mbstring
          #- php-fpm
