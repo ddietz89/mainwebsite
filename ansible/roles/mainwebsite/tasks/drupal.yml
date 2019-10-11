@@ -4,7 +4,6 @@
     dest: /usr/sbin/composer.phar
     mode: '0755'
 
-
 - name: start httpd
   service:
     name: httpd
@@ -14,3 +13,12 @@
   service:
     name: mariadb
     state: started
+
+- name: set root credentials for mariadb 
+  mysql_user: name=root host=localhost password={{ mysql_root_pass }}
+
+- name: create my.cnf for root user
+  template:
+    src: root/.my.cnf
+    dest: /root/.my.cnf
+    mode: 0600
