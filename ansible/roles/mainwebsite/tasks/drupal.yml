@@ -3,3 +3,14 @@
     src: usr/sbin/composer.phar
     dest: /usr/sbin/composer.phar
     mode: '0755'
+
+
+- name: start httpd
+  service:
+    name: httpd
+    state: started
+
+- name: start mariadb
+  service:
+    name: mariadb
+    state: started
