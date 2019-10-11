@@ -27,4 +27,4 @@
   mysql_db: name=drupal state=present
 
 - name: create user for drupal
-  mysql_user: name=drupal  password={{ drupal_pass }} priv="drupal.*" state=present 
+  mysql_user: name=drupal  password={{ drupal_pass }} priv="drupal.*:ALL" state=present 
