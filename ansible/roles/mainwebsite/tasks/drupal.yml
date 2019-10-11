@@ -67,3 +67,22 @@
   shell: drush si -y --site-name='Blog' --account-name='admin' --account-pass='{{ drupal_admin_pass }}' --db-url='mysql://drupal:{{ drupal_pass }}@localhost/drupal'
   args:
     chdir: "/var/www/html/blog"
+
+- name: fix ownership
+  file:
+    path: "/var/www/html/blog"
+    owner: apache
+    group: apache
+    recurse: yes
+
+- name: set permissions on the settings file
+  file:
+    path: "/var/www/html/blog/sites/default/settings.php"
+    mode: 0744
+
+- name: set permissions on files direcotry
+  file:
+    path: "/var/www/html/blog/sites/default/files"
+    mode: 0777
+    state: directory
+    recurse: yes
