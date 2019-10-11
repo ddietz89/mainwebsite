@@ -6,6 +6,7 @@
          - mariadb
          - mariadb-server
          - httpd
+         - MySQL-python
 
 #- name: pip packages
 #  pip: 
