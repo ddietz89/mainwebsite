@@ -2,6 +2,10 @@
   yum: name='{{ item }}' state=present
   with_items:
          - git
+         - php
+         - mariadb
+         - mariadb-server
+         - httpd
 
 #- name: pip packages
 #  pip: 
