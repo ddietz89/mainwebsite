@@ -64,6 +64,6 @@
     creates: "/var/www/html/blog/vendor/autoload.php"
 
 - name: setup drupal
-  shell: drush si -y --site-name="Dan's Blog" --account-name="admin" --account-pass="{{ drupal_admin_pass }}" --db-url=mysql://drupal:{{ drupal_pass }}@localhost/drupal 
+  shell: drush si -y --site-name="Dan\'s Blog" --account-name="admin" --account-pass="{{ drupal_admin_pass }}" --db-url=mysql://drupal:{{ drupal_pass }}@localhost/drupal 
   args:
     chdir: "/var/www/html/blog"
