@@ -8,7 +8,7 @@
          - MySQL-python
 
 - name: upgrade php
-  shell: amazon-linux-extras enable '{{ item }}' state=present
+  shell: amazon-linux-extras enable '{{ item }}'
   become: yes
   with_items:
          - php7.2
