@@ -28,3 +28,20 @@
 
 - name: create user for drupal
   mysql_user: name=drupal  password={{ drupal_pass }} priv="drupal.*:ALL" state=present 
+
+- name: get drush repository
+  git:
+    repo: https://github.com/drush-ops/drush.git
+    version: "9.7.1"
+    dest: /opt/drush
+
+- name: install drush 
+  shell: composer.phar install
+  args:
+    chdir: "/opt/drush"
+
+- name: link drush binary
+  file:
+    src: /opt/drush/drush
+    dest: /usr/sbin/drush
+    state: link
