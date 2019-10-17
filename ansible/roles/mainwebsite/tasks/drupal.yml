@@ -56,8 +56,6 @@
     repo: http://git.drupal.org/project/drupal.git
     version: "8.7.8"
     dest: "/var/www/html/blog"
-  args:
-    creates: "/var/www/html/blog/.git"
 
 - name: install drupal
   shell: composer.phar install
