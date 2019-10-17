@@ -86,3 +86,9 @@
     mode: 0777
     state: directory
     recurse: yes
+ 
+- name: copy httpd conf file
+  copy:
+    src: "etc/httpd/conf/httpd.conf"
+    dest: "/etc/httpd/conf/httpd.conf"
+    mode: '0755'
