@@ -95,6 +95,6 @@
 
 - name: copy drupal admin password
   copy:
-    content: "{{ drual_admin_pass }}"
+    content: "{{ drupal_admin_pass }}"
     dest: "/root/.drupal_admin_pass"
     mode: '0400'
