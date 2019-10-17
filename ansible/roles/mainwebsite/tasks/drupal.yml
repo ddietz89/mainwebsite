@@ -92,3 +92,9 @@
     src: "etc/httpd/conf/httpd.conf"
     dest: "/etc/httpd/conf/httpd.conf"
     mode: '0755'
+
+- name: copy drupal admin password
+  copy:
+    content: "{{ drual_admin_pass }}"
+    dest: "/root/.drupal_admin_pass"
+    mode: '0400'
