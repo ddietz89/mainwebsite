@@ -67,6 +67,7 @@
   shell: drush si -y --site-name='Blog' --account-name='admin' --account-pass='{{ drupal_admin_pass }}' --db-url='mysql://drupal:{{ drupal_pass }}@localhost/drupal'
   args:
     chdir: "/var/www/html/blog"
+    creates: "/var/www/html/blog/sites/default/settings.php"
 
 - name: fix ownership
   file:
