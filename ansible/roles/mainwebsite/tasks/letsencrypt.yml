@@ -17,3 +17,9 @@
   yum:
     name: "python2-certbot-apache.noarch"
     state: present
+
+- name: certbot renew cron 
+  copy:
+    src: "etc/cron.d/certbot"
+    dest: "/etc/cron.d/certbot"
+    mode: '0644'
