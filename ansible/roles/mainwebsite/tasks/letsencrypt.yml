@@ -1,8 +1,7 @@
---
+---
 
 # Install EPEL so we can get certbot
 
----
 - name:  EPEL configured?
   stat:
     path: "/etc/yum.repos.d/epel.repo"
