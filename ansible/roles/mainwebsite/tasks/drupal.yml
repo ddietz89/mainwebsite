@@ -94,6 +94,12 @@
     dest: "/etc/httpd/conf/httpd.conf"
     mode: '0755'
 
+- name: copy httpd ssl conf file
+  copy:
+    src: "etc/httpd/conf.d/ssl.conf"
+    dest: "/etc/httpd/conf.d/ssl.conf"
+    mode: '0755'
+
 - name: copy drupal admin password
   copy:
     content: "{{ drupal_admin_pass }}"
