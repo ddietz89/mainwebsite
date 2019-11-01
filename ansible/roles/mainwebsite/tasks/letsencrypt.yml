@@ -12,3 +12,8 @@
     name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
     state: present
   when: not epel_status.stat.exists
+
+- name: install certbot
+  yum:
+    name: "python2-certbot-apache.noarch"
+    state: present
