@@ -1,0 +1,15 @@
+--
+
+# Install EPEL so we can get certbot
+
+---
+- name:  EPEL configured?
+  stat:
+    path: "/etc/yum.repos.d/epel.repo"
+  register: epel_status
+
+- name: install EPEL 
+  yum:
+    name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+    state: present
+  when: not epel_status.stat.exists
